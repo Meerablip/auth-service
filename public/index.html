@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auth Service - Secure Authentication</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+  <h1 class="title">🔐 Auth Service</h1>
+  
+  <!-- Navigation Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" onclick="openTab('login')">Login</button>
+    <button class="tab-btn" onclick="openTab('signup')">Signup</button>
+    <button class="tab-btn" onclick="openTab('profile')">Profile</button>
+    <button class="tab-btn" onclick="openTab('admin')">Admin</button>
+  </div>
+
+  <!-- Message Display Area -->
+  <div id="message"></div>
+
+  <!-- Login Tab -->
+  <div id="login" class="tab-content active">
+    <h3>Login to Your Account</h3>
+    <form onsubmit="login(event)">
+      <input 
+        id="login-email" 
+        type="email" 
+        placeholder="Email" 
+        required 
+        autocomplete="email"
+      />
+      <input 
+        id="login-password" 
+        type="password" 
+        placeholder="Password" 
+        required 
+        autocomplete="current-password"
+        minlength="6"
+      />
+      <button type="submit" id="login-btn">Login</button>
+    </form>
+  </div>
+
+  <!-- Signup Tab -->
+  <div id="signup" class="tab-content">
+    <h3>Create New Account</h3>
+    <form onsubmit="signup(event)">
+      <input 
+        id="signup-email" 
+        type="email" 
+        placeholder="Email" 
+        required 
+        autocomplete="email"
+      />
+      <input 
+        id="signup-password" 
+        type="password" 
+        placeholder="Password (min 6 characters)" 
+        required 
+        autocomplete="new-password"
+        minlength="6"
+      />
+      <select id="signup-role" required>
+        <option value="">Select Role</option>
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
+      <button type="submit" id="signup-btn">Create Account</button>
+    </form>
+  </div>
+
+  <!-- Profile Tab -->
+  <div id="profile" class="tab-content">
+    <h3>Your Profile</h3>
+    <div id="profile-info" class="info-box">
+      <p>Please login to view your profile</p>
+    </div>
+    <button onclick="logout()" class="logout-btn" style="display: none;" id="logout-btn">Logout</button>
+  </div>
+
+  <!-- Admin Tab -->
+  <div id="admin" class="tab-content">
+    <h3>Admin Panel</h3>
+    <div id="admin-info" class="info-box">
+      <p>Admin access required</p>
+    </div>
+    <button onclick="checkAdmin()" id="admin-check-btn">Check Admin Access</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
