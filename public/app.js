@@ -1,6 +1,6 @@
 // API Configuration - auto-detect environment
 const API_URL = window.location.hostname === 'localhost'
-  ? 'http://localhost:3001'
+  ? 'https://auth-service-l3yz.onrender.com'
   : window.location.origin;
 const TOKEN_KEY = 'auth_token';
 
