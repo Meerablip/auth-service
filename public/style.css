@@ -6,7 +6,7 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: system-ui, sans-serif;
-  background: linear-gradient(135deg, #6366f1, #22d3ee);
+  background: #b9acf9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,6 +67,17 @@ input {
   margin-bottom: 10px;
   border-radius: 8px;
   border: 1px solid #cbd5f5;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+  font-family: system-ui, sans-serif;
+  color: #1e293b;
+  cursor: pointer;
 }
 
 button {
